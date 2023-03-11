@@ -1,2 +1,0 @@
-FOR ACTIVATE ENVIRONMENT
-source D:/DJANGO/fordjango/Scripts/activate
