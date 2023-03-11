@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>THIS IS HOME TEMPLATE FILE</h1>
+    <a href="{% url 'detail' 1 %}">Student 1</a><br>
+    <br><a href="{% url 'detail' 2 %}">Student 2</a><br>
+    <br><a href="{% url 'detail' 3 %}">Student 3</a><br>
+    <br><a href="{% url 'detail' 4 %}">Student 4</a><br>
+
+    <br><a href="{% url 'subdetail' 1 1 %}">Sub Student 1</a><br>
+    <br><a href="{% url 'subdetail' 2 2 %}">Sub Student 2</a><br>
+    <br><a href="{% url 'subdetail' 3 3 %}">Sub Student 3</a><br>
+    <br><a href="{% url 'subdetail' 4 4 %}">Sub Student 4</a><br>
+</body>
+</html>

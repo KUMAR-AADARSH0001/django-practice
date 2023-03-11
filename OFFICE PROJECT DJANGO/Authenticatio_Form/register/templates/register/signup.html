@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <style>
+        .success{
+            color: chartreuse;
+        }
+    </style>
+</head>
+<body >
+    <form action="" method="post"><br><br>
+    <h1>Welcome To Signup Page</h1><br><br>
+        {% csrf_token %}
+        {% if form.non_field.errors %}
+            {% for error in form.non_field.errors %}
+                <p>{{error}}</p>
+            {% endfor %}
+        {% endif %}
+        {% for fm in form %}
+            {{fm.label_tag}} {{fm}} {{fm.errors|striptags}} <br><br>
+        {% endfor %}
+        <input type="submit" value="Submit">
+    </form>
+    {% if messages %}
+        {% for message in messages %}
+        <small {% if message.tags %} class="{{message.tags}}" {% endif %}>{{message}}</small>
+        {% endfor %}
+        {% endif %}
+    <br><br>Click Here For Go Back<br>
+    <a href="{% url 'home' %}">
+        <input type="submit" value="Back">
+    </a>
+</body>
+</html>
